@@ -1,2 +1,2 @@
 # contact_list_rails
-Projeto Contact List com rails
+Projeto Contact_List feito com rails
