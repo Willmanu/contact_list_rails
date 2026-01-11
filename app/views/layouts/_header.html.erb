@@ -15,7 +15,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <%# unless user_signed_in? %>
           <li class="nav-item">
-            <%= link_to 'Nova Conta', '#', class: 'nav-link' %>
+            <%= link_to 'Nova Conta', new_user_path, class: 'nav-link' %>
           </li>
         <%# end %>
       </ul>
