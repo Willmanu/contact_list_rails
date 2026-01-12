@@ -2,29 +2,68 @@
   <div class="container-fluid">
     <%= link_to 'Contact List', root_path, class: 'navbar-brand' %>
 
-    <button class="navbar-toggler" type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#expanded-menu" 
-            aria-controls="expanded-menu" 
-            aria-expanded="false" 
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#expanded-menu"
+            aria-controls="expanded-menu"
+            aria-expanded="false"
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="expanded-menu">
+      
+      <!-- MENU ESQUERDO -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <%# unless user_signed_in? %>
+        <% unless user_signed_in? %>
           <li class="nav-item">
             <%= link_to 'Nova Conta', new_user_path, class: 'nav-link' %>
           </li>
-        <%# end %>
+        <% end %>
       </ul>
 
+      <!-- MENU DIREITO -->
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <%= link_to 'Entrar', '#', class: 'nav-link' %>
-        </li>
+        <% unless user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to 'Entrar', entrar_path, class: 'nav-link' %>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a href="#"
+               class="nav-link dropdown-toggle"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Bem-vindo, <%= current_user.name %>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <%= link_to 'Minha Página', current_user, class: 'dropdown-item' %>
+              </li>
+
+              <li>
+                <%= link_to 'Editar', '#', class: 'dropdown-item' %>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+              <%= button_to 'Sair',
+                sair_path,
+                method: :delete,
+                data: { turbo_confirm: 'Deseja sair?' },
+                class: 'dropdown-item btn btn-link',
+                form: { class: 'm-0 p-0' } %>
+            </ul>
+          </li>
+        <% end %>
       </ul>
+
     </div>
   </div>
 </nav>
