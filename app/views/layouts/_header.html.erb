@@ -41,11 +41,11 @@
 
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
-                <%= link_to 'Minha Página', current_user, class: 'dropdown-item' %>
+                <%= link_to 'Minha Página', contacts_path, class: 'dropdown-item' %>
               </li>
 
               <li>
-                <%= link_to 'Editar', '#', class: 'dropdown-item' %>
+                <%= link_to 'Editar', edit_user_path(current_user), class: 'dropdown-item' %>
               </li>
 
               <li>
