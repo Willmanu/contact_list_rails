@@ -1,14 +1,37 @@
-# contact_list_rails
-Este é o meu primeiro projeto em Ruby on Rails, chamado Contact List.
+# Contact List – Ruby on Rails
 
-O projeto consiste em um cadastro de usuários, onde foi possível aprender e aplicar na prática um CRUD (Create, Read, Update e Delete).
+Aplicação web desenvolvida em Ruby on Rails para gerenciamento de contatos.
 
-Durante o desenvolvimento, aprendi os conceitos fundamentais do padrão MVC (Model, View e Controller), entendendo a responsabilidade de cada camada dentro de uma aplicação Rails.
+Este foi meu primeiro projeto utilizando o framework Rails, com foco em consolidar conceitos fundamentais do desenvolvimento web.
 
-Também aprendi a importância das rotas, como elas funcionam e como se relacionam com os controllers e actions.
+## Funcionalidades
+- Autenticação de usuário
+- Cadastro de contatos
+- Listagem de contatos por usuário
+- Edição de contatos
+- Remoção de contatos
 
-A aplicação possui uma tela inicial de login, onde o proprietário da conta se autentica.
-Após o login, o usuário é direcionado para uma tela com a lista de contatos cadastrados, associada ao usuário logado.
+## Conceitos aplicados
+- CRUD (Create, Read, Update e Delete)
+- Padrão MVC (Model, View e Controller)
+- Rotas REST e relacionamento com controllers e actions
+- Associação de dados entre usuários e contatos
 
-Este projeto tem como objetivo consolidar os conceitos iniciais de Ruby on Rails e servir como registro do meu aprendizado e evolução com o framework.
+## Tecnologias utilizadas
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- HTML
+- CSS
+
+## Objetivo do projeto
+Consolidar os conceitos iniciais de Ruby on Rails e servir como registro do meu aprendizado e evolução com o framework, incluindo entendimento de fluxo de autenticação, estrutura MVC e organização de uma aplicação Rails.
+
+## Como executar o projeto
+1. Clone o repositório
+2. Execute `bundle install`
+3. Configure o banco de dados
+4. Execute `rails db:create db:migrate`
+5. Inicie o servidor com `rails s`
+6. Acesse `http://localhost:3000`
 
