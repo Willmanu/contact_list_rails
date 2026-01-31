@@ -65,5 +65,5 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'rubocop', '~> 1.82', :groups => %i[development test]
+gem 'rubocop', '~> 1.84', :groups => %i[development test]
 gem 'rubocop-rails', '~> 2.34', :groups => %i[development test]
